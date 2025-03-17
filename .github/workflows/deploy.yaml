@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    uses: devops4solutions/github-reusable-workflows/blob/main/ci.yaml@main
+    uses: devops4solutions/github-reusable-workflows/.github/workflows/ci.yaml@main
     with:
       working-directory: terraform
       ecr-registry: public.ecr.aws/w0f5g4k6
