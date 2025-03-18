@@ -7,7 +7,9 @@ resource "helm_release" "myapp" {
   create_namespace = "true"
   force_update = true
   values = [
-    file("${path.module}/${var.environment}/values_hello.yaml")  # Optional: Use custom values file
+    templatefile("${path.module}/values_hello.yaml", {
+      ENVIRONMENT = var.environment
+    })
   ]
     set {
     name  = "image.tag"
