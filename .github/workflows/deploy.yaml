@@ -17,6 +17,7 @@ jobs:
       ecr-registry: public.ecr.aws/w0f5g4k6
       ecr-repository: hello-svc
       image-tag: ${{ github.sha }}
+      jar-name: helloservice-1.jar
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
