@@ -1,4 +1,4 @@
-resource "aws_route53_record" "eks_record" {
+/*resource "aws_route53_record" "eks_record" {
   zone_id = data.aws_route53_zone.zone.zone_id
   name    = "hello.${var.environment}.${var.domain_name}"
   type    = "A"
@@ -11,7 +11,7 @@ resource "aws_route53_record" "eks_record" {
 
 data "aws_lb" "lb" {
   name = "${var.environment}-microservices-alb"  
-}
+}*/
 data "aws_route53_zone" "zone" {
   name = "devops4solutions.com"  # Replace with your domain
 }
