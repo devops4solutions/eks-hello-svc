@@ -10,7 +10,7 @@ resource "aws_route53_record" "eks_record" {
 }
 
 data "aws_lb" "lb" {
-  name = "${var.environment}-alb"  
+  name = "${var.environment}-microservices-alb"  
 }
 data "aws_route53_zone" "zone" {
   name = "devops4solutions.com"  # Replace with your domain
