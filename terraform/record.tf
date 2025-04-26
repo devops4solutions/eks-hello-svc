@@ -8,10 +8,11 @@
     evaluate_target_health = true
   }
 }
-*/
+
 data "aws_lb" "lb" {
   name = "${var.environment}-microservices-alb"  
 }
+*/
 data "aws_route53_zone" "zone" {
   name = "devops4solutions.com"  # Replace with your domain
 }
