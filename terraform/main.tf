@@ -7,7 +7,7 @@ resource "helm_release" "myapp" {
   create_namespace = "true"
   force_update = true
   values = [
-    templatefile("${path.module}/values_hello.yaml", {
+    templatefile("${path.module}/${var.environment}/values_hello.yaml", {
       ENVIRONMENT = var.environment
     })
   ]
