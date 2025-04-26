@@ -4,11 +4,11 @@ resource "helm_release" "myapp" {
   chart      = "springboot"
   namespace  = "app1"  # Change as per your setup
   version    = "0.1.5"    # Use the correct version from index.yaml
-  create_namespace = "true"
+  create_namespace = true
   force_update = true
   values = [
     templatefile("${path.module}/${var.environment}/values_hello.yaml", {
-      ENVIRONMENT = var.environment
+      ENVIRONMENT = var.environment,
       ACM = data.aws_acm_certificate.acm.arn
     })
   ]
