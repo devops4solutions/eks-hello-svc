@@ -32,3 +32,4 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   
   
+  
