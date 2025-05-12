@@ -1,0 +1,25 @@
+replicaCount: 1
+image:
+  repository: public.ecr.aws/w0f5g4k6/hello-svc
+  pullPolicy: IfNotPresent
+  tag: "487af31bb9fa102b44e076261cae6df4bf480ab6"
+service:
+  type: ClusterIP
+  port: 80
+  name: hello
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/path: "/actuator/prometheus"
+livenessProbe:
+  httpGet:
+    path: /hello
+    port: http
+readinessProbe:
+  httpGet:
+    path: /hello
+    port: http
+serviceAccount:
+  create: true
+  automount: true
+  annotations: {}
+  name: ""
