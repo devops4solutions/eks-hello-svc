@@ -1,0 +1,7 @@
+apiVersion: v2
+name: springboot
+version: 0.1.0
+dependencies:
+  - name: springboot
+    version: 0.1.5
+    repository: https://devops4solutions.github.io/springboot-helm-chart
